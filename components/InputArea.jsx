@@ -18,17 +18,16 @@ const InputArea = ({ input, setInput }) => (
       placeholder="Type your input here..."
       rows={4}
       style={{
-        width: '100%',
+        width: '98%',
         padding: '0.9rem',
         borderRadius: '10px',
-        backgroundColor: '#1e293b', // slate-800
-        color: '#e2e8f0', // text-slate-100
-        border: '1px solid #334155', // slate-700
+        backgroundColor: '#1e293b', 
+        color: '#e2e8f0', 
+        border: '1px solid #334155', 
         boxShadow: '0 4px 10px rgba(0,0,0,0.25)',
         fontSize: '1rem',
         fontFamily: 'monospace',
-        resize: 'vertical',
-        transition: 'border-color 0.2s ease-in-out',
+        resize: 'none',
       }}
       onFocus={(e) =>
         (e.target.style.borderColor = '#38bdf8') // sky-400 on focus
