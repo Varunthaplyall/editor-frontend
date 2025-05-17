@@ -7,7 +7,7 @@ import RunButton from '../components/RunButton';
 import { submitCode } from './api';
 
 function App() {
-  const [code, setCode] = useState('print(input())');
+  const [code, setCode] = useState("user_input = input()\nprint(\"You entered:\", user_input)");
   const [input, setInput] = useState('Hello, World!');
   const [output, setOutput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -36,8 +36,9 @@ function App() {
   };
 
   return (
-    <div style={{ backgroundColor: '#1e1e1e', color: '#ffffff', minHeight: '100vh', padding: '2rem' }}>
-      <h2 style={{ color: '#22d3ee', fontSize: '1.5rem', marginBottom: '1rem' }}>Python Code Runner 🐍</h2>
+    <div style={{ backgroundColor: '#1e1e1e', color: '#ffffff', minHeight: '100vh', padding: '1rem' }}>
+    <h2 style={{ color: '#22d3ee', fontSize: '1.5rem', marginBottom: '1rem', fontWeight: 600, textAlign: 'center', letterSpacing: '2px', textShadow: '0 0 8px #22d3ee', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
+      Python Code Runner </h2>
 
       <div style={{ marginBottom: '1rem' }}>
         <CodeEditor code={code} setCode={setCode} language="python" />
