@@ -8,7 +8,7 @@ export async function submitCode({ language_id, source_code, stdin }){
     }
     console.log(data)
     try {
-        const response = await axios.post('http://localhost:3000/submit', data);
+        const response = await axios.post('https://backend-editor-z99e.onrender.com/submit', data);
         console.log(response.data)
         return response.data
     } catch (error) {
